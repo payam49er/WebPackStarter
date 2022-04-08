@@ -1,12 +1,9 @@
-import {person,sayHello} from './lib';
+import React from "react";
+import ReactDom from 'react-dom'
 
-
-async function getPosts(){
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/');
-
-    const data = await response.json();
-
-    return data;
+const App = () => {
+    return (<h1>This is basic react!</h1>);
 }
 
-getPosts().then(posts => console.log(posts[1]));
+
+ReactDom.render(<App />,document.querySelector(".container"));
